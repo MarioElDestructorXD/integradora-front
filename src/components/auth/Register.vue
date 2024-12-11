@@ -86,7 +86,7 @@
 
 <script>
 import Swal from 'sweetalert2';
-const apiUrl = import.meta.env.VITE_BACKEND_URL; // Debe definirse en .env
+const apiUrl = import.meta.env.VUE_APP_API_URL; // Debe definirse en .env
 
 /* eslint-disable vue/multi-word-component-names */
 export default {
