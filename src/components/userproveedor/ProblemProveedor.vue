@@ -5,11 +5,19 @@
             <NavBar />
         </header>
 
+        <!-- Spinner de cierre de sesión -->
+        <div v-if="isLoggingOut" class="spinner-overlay">
+            <div class="spinner"></div>
+            <p>Cerrando sesión...</p>
+        </div>
+
         <!-- Contenedor principal para problemas y detalles -->
         <!-- Lista de Problemas -->
         <div id="problemas-container" class="problemas-container">
-                        <!-- Mostrar mensaje de carga si loading es verdadero -->
-            <p v-if="loading">Cargando problemas...</p>
+            <div v-if="loading" class="spinner-container">
+                <div class="spinner"></div>
+                <p class="loading-text">Cargando...</p>
+            </div>
             <p v-else-if="!problemas.length">No hay problemas disponibles.</p>
             <div v-for="problema in problemas" :key="problema.idProblema" class="problema-card"
                 @click="mostrarDetalle(problema)">
