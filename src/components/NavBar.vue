@@ -5,12 +5,12 @@
                 <div class="navbar-left">
                     <template v-if="role === 'CLIENTE'">
                         <router-link to="/" class="navbar-logo">
-                            <span class="navbar-brand">FixyProooooooooooo</span>
+                            <span class="navbar-brand">FP</span>
                         </router-link>
                     </template>
                     <template v-if="role === 'PROVEEDOR'">
                         <router-link to="/problemProveedor" class="navbar-logo">
-                            <span class="navbar-brand">FixyProooooooooooo</span>
+                            <span class="navbar-brand">FP</span>
                         </router-link>
                     </template>
                 </div>
