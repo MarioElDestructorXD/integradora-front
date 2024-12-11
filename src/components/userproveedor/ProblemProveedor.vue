@@ -14,6 +14,7 @@
         <!-- Contenedor principal para problemas y detalles -->
         <!-- Lista de Problemas -->
         <div id="problemas-container" class="problemas-container">
+                        <!-- Mostrar mensaje de carga si loading es verdadero -->
             <p v-if="loading">Cargando problemas...</p>
             <p v-else-if="!problemas.length">No hay problemas disponibles.</p>
             <div v-for="problema in problemas" :key="problema.idProblema" class="problema-card"
@@ -663,13 +664,27 @@ export default {
     z-index: 2000;
 }
 
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el spinner y el texto estén en una columna */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    /* Asegura que ocupe toda la altura de la ventana */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho disponible */
+    text-align: center;
+    /* Centra el texto debajo del spinner */
+}
+
 .spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #fff;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
 }
 
 .badge {
