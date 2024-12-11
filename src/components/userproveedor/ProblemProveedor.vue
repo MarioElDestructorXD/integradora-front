@@ -5,12 +5,6 @@
             <NavBar />
         </header>
 
-        <!-- Spinner de cierre de sesión -->
-        <div v-if="isLoggingOut" class="spinner-overlay">
-            <div class="spinner"></div>
-            <p>Cerrando sesión...</p>
-        </div>
-
         <!-- Contenedor principal para problemas y detalles -->
         <!-- Lista de Problemas -->
         <div id="problemas-container" class="problemas-container">
