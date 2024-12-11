@@ -42,6 +42,8 @@
 
 <script>
 import Swal from 'sweetalert2';
+const apiUrl = process.env.VUE_APP_API_URL;
+
 /* eslint-disable vue/multi-word-component-names */
 export default {
     name: 'Login',
@@ -53,7 +55,6 @@ export default {
     },
     methods: {
         async handleLogin() {
-            const apiUrl = process.env.VUE_APP_API_URL;
             if (!this.email || !this.password) {
                 Swal.fire({
                     icon: "error",
